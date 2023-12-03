@@ -34,9 +34,9 @@ status = Gauge('myip_status', 'MyIP status and info',
                 'isp',
                 'org',
                 'asn',
+                'longitude',
+                'latitude',
                 'query'])
-longitude = Gauge('myip_longitude', 'MyIP longitude')
-latitude = Gauge('myip_latitude', 'MyIP latitude')
 
 
 def get_myip():
@@ -65,10 +65,9 @@ def metrics():
                       isp=data['isp'],
                       org=data['org'],
                       asn=data['as'],
+                      longitude=data['lon'],
+                      latitude=data['lat'],
                       query=data['query']).set(1 if data['status'] == 'success' else 0)
-
-        longitude.set(data['lon'])
-        latitude.set(data['lat'])
 
         logging.info(data)
 
