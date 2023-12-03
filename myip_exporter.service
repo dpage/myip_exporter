@@ -4,7 +4,7 @@ Description=MyIP Exporter
 [Service]
 Type=simple
 Restart=on-failure
-ExecStart=/usr/local/myip_exporter/venv/bin/python3 /usr/local/myip_exporter/src/myip_exporter.py
+ExecStart=/usr/local/myip_exporter/venv/bin/python3 /usr/local/myip_exporter/myip_exporter.py
 
 [Install]
 WantedBy=multi-user.target
