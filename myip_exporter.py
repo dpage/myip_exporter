@@ -69,8 +69,6 @@ def metrics():
                       latitude=data['lat'],
                       query=data['query']).set(1 if data['status'] == 'success' else 0)
 
-        logging.info(data)
-
         cache_until = datetime.datetime.now() + datetime.timedelta(
             seconds=cache_seconds)
 
