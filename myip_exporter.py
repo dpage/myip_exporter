@@ -12,7 +12,7 @@ app = Flask("MyIP-Exporter")
 # Setup logging values
 format_string = 'level=%(levelname)s datetime=%(asctime)s %(message)s'
 logging.basicConfig(encoding='utf-8',
-                    level=logging.DEBUG,
+                    level=logging.WARNING,
                     format=format_string)
 
 # Disable Waitress Logs
